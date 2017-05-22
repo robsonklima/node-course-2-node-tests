@@ -1,17 +1,49 @@
+// https://github.com/mjackson/expect
+const expect = require('expect');
 const utils = require('./utils');
+
 
 it('should add two numbers', () => {
   var res = utils.add(40, 4);
 
-  if (res !== 44) {
-    throw new Error(`Expected 44, but got ${res}.`);
-  }
+  expect(res).toBe(44).toBeA('number');
 });
 
 it('should a square number', () => {
   var res = utils.square(3);
 
-  if (res !== 9) {
-    throw new Error(`Expected 100, but got ${res}.`);
-  }
+  expect(res).toBe(9).toBeA('number');
 });
+
+it('should set first name and last name', () => {
+  var user = {location: 'Arizona', age: 20};
+  var res = utils.setName(user, 'Robson Lima');
+
+  expect(res).toInclude({
+    firstName: 'Robson',
+    lastName: 'Lima'
+  });
+});
+
+
+// it('should expect some values', () => {
+//   // expect(12).toNotBe(12);
+//   // expect({name: 'Robson'}).toEqual({name: 'Robson'});
+//   // expect([2,3,4]).toInclude(4);
+//   // expect([2,3,4]).toExclude(4);
+//   // expect({
+//   //   name: 'Robson',
+//   //   age: 25,
+//   //   location: 'Gravataí'
+//   // }).toInclude({
+//   //   age: 25
+//   // });
+//   // expect({
+//   //   name: 'Robson',
+//   //   age: 25,
+//   //   location: 'Gravataí'
+//   // }).toExclude({
+//   //   age: 26
+//   // });
+//
+// });
