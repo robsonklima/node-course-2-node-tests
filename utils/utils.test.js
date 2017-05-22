@@ -25,24 +25,23 @@ it('should set first name and last name', () => {
   });
 });
 
-// it('should expect some values', () => {
-//   // expect(12).toNotBe(12);
-//   // expect({name: 'Robson'}).toEqual({name: 'Robson'});
-//   // expect([2,3,4]).toInclude(4);
-//   // expect([2,3,4]).toExclude(4);
-//   // expect({
-//   //   name: 'Robson',
-//   //   age: 25,
-//   //   location: 'Gravataí'
-//   // }).toInclude({
-//   //   age: 25
-//   // });
-//   // expect({
-//   //   name: 'Robson',
-//   //   age: 25,
-//   //   location: 'Gravataí'
-//   // }).toExclude({
-//   //   age: 26
-//   // });
-//
-// });
+it('should expect some values', () => {
+  // expect(12).toNotBe(12);
+  // expect({name: 'Robson'}).toEqual({name: 'Robson'});
+  // expect([2,3,4]).toInclude(4);
+  // expect([2,3,4]).toExclude(4);
+  // expect({
+  //   name: 'Robson',
+  //   age: 25,
+  //   location: 'Gravataí'
+  // }).toInclude({
+  //   age: 25
+  // });
+  expect({
+    name: 'Robson',
+    age: 25,
+    location: 'Gravataí'
+  }).toExclude({
+    age: 26
+  });
+});
