@@ -25,7 +25,6 @@ it('should set first name and last name', () => {
   });
 });
 
-
 // it('should expect some values', () => {
 //   // expect(12).toNotBe(12);
 //   // expect({name: 'Robson'}).toEqual({name: 'Robson'});
